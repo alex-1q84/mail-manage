@@ -1,0 +1,370 @@
+version = 1
+requires-python = ">=3.12"
+
+[[package]]
+name = "cached-property"
+version = "2.0.1"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cached-property/2.0.1/cached_property-2.0.1.tar.gz", hash = "sha256:484d617105e3ee0e4f1f58725e72a8ef9e93deee462222dbd51cd91230897641" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cached-property/2.0.1/cached_property-2.0.1-py3-none-any.whl", hash = "sha256:f617d70ab1100b7bcf6e42228f9ddcb78c676ffa167278d9f730d1c2fba69ccb" },
+]
+
+[[package]]
+name = "certifi"
+version = "2024.12.14"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/certifi/2024.12.14/certifi-2024.12.14.tar.gz", hash = "sha256:b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/certifi/2024.12.14/certifi-2024.12.14-py3-none-any.whl", hash = "sha256:1275f7a45be9464efc1173084eaa30f866fe2e47d389406136d332ed4967ec56" },
+]
+
+[[package]]
+name = "cffi"
+version = "1.17.1"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "pycparser" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1.tar.gz", hash = "sha256:1c39c6016c32bc48dd54561950ebd6836e1670f2ae46128f67cf49e789c52824" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:805b4371bf7197c329fcb3ead37e710d1bca9da5d583f5073b799d5c5bd1eee4" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:733e99bc2df47476e3848417c5a4540522f234dfd4ef3ab7fafdf555b082ec0c" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:1257bdabf294dceb59f5e70c64a3e2f462c30c7ad68092d01bbbfb1c16b1ba36" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:da95af8214998d77a98cc14e3a3bd00aa191526343078b530ceb0bd710fb48a5" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:d63afe322132c194cf832bfec0dc69a99fb9bb6bbd550f161a49e9e855cc78ff" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:f79fc4fc25f1c8698ff97788206bb3c2598949bfe0fef03d299eb1b5356ada99" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b62ce867176a75d03a665bad002af8e6d54644fad99a3c70905c543130e39d93" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:386c8bf53c502fff58903061338ce4f4950cbdcb23e2902d86c0f722b786bbe3" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:4ceb10419a9adf4460ea14cfd6bc43d08701f0835e979bf821052f1805850fe8" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-win32.whl", hash = "sha256:a08d7e755f8ed21095a310a693525137cfe756ce62d066e53f502a83dc550f65" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp312-cp312-win_amd64.whl", hash = "sha256:51392eae71afec0d0c8fb1a53b204dbb3bcabcb3c9b807eedf3e1e6ccf2de903" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:f3a2b4222ce6b60e2e8b337bb9596923045681d71e5a082783484d845390938e" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:0984a4925a435b1da406122d4d7968dd861c1385afe3b45ba82b750f229811e2" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:d01b12eeeb4427d3110de311e1774046ad344f5b1a7403101878976ecd7a10f3" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:706510fe141c86a69c8ddc029c7910003a17353970cff3b904ff0686a5927683" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:de55b766c7aa2e2a3092c51e0483d700341182f08e67c63630d5b6f200bb28e5" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:c59d6e989d07460165cc5ad3c61f9fd8f1b4796eacbd81cee78957842b834af4" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dd398dbc6773384a17fe0d3e7eeb8d1a21c2200473ee6806bb5e6a8e62bb73dd" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:3edc8d958eb099c634dace3c7e16560ae474aa3803a5df240542b305d14e14ed" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:72e72408cad3d5419375fc87d289076ee319835bdfa2caad331e377589aebba9" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-win32.whl", hash = "sha256:e03eab0a8677fa80d646b5ddece1cbeaf556c313dcfac435ba11f107ba117b5d" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cffi/1.17.1/cffi-1.17.1-cp313-cp313-win_amd64.whl", hash = "sha256:f6a16c31041f09ead72d69f583767292f750d24913dadacf5756b966aacb3f1a" },
+]
+
+[[package]]
+name = "charset-normalizer"
+version = "3.4.1"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1.tar.gz", hash = "sha256:44251f18cd68a75b56585dd00dae26183e102cd5e0f9f1466e6df5da2ed64ea3" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:73d94b58ec7fecbc7366247d3b0b10a21681004153238750bb67bd9012414545" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:dad3e487649f498dd991eeb901125411559b22e8d7ab25d3aeb1af367df5efd7" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:c30197aa96e8eed02200a83fba2657b4c3acd0f0aa4bdc9f6c1af8e8962e0757" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:2369eea1ee4a7610a860d88f268eb39b95cb588acd7235e02fd5a5601773d4fa" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bc2722592d8998c870fa4e290c2eec2c1569b87fe58618e67d38b4665dfa680d" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:ffc9202a29ab3920fa812879e95a9e78b2465fd10be7fcbd042899695d75e616" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:804a4d582ba6e5b747c625bf1255e6b1507465494a40a2130978bda7b932c90b" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:0f55e69f030f7163dffe9fd0752b32f070566451afe180f99dbeeb81f511ad8d" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:c4c3e6da02df6fa1410a7680bd3f63d4f710232d3139089536310d027950696a" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-musllinux_1_2_s390x.whl", hash = "sha256:5df196eb874dae23dcfb968c83d4f8fdccb333330fe1fc278ac5ceeb101003a9" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:e358e64305fe12299a08e08978f51fc21fac060dcfcddd95453eabe5b93ed0e1" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-win32.whl", hash = "sha256:9b23ca7ef998bc739bf6ffc077c2116917eabcc901f88da1b9856b210ef63f35" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp312-cp312-win_amd64.whl", hash = "sha256:6ff8a4a60c227ad87030d76e99cd1698345d4491638dfa6673027c48b3cd395f" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:aabfa34badd18f1da5ec1bc2715cadc8dca465868a4e73a0173466b688f29dda" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:22e14b5d70560b8dd51ec22863f370d1e595ac3d024cb8ad7d308b4cd95f8313" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:8436c508b408b82d87dc5f62496973a1805cd46727c34440b0d29d8a2f50a6c9" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:2d074908e1aecee37a7635990b2c6d504cd4766c7bc9fc86d63f9c09af3fa11b" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:955f8851919303c92343d2f66165294848d57e9bba6cf6e3625485a70a038d11" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:44ecbf16649486d4aebafeaa7ec4c9fed8b88101f4dd612dcaf65d5e815f837f" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:0924e81d3d5e70f8126529951dac65c1010cdf117bb75eb02dd12339b57749dd" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:2967f74ad52c3b98de4c3b32e1a44e32975e008a9cd2a8cc8966d6a5218c5cb2" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:c75cb2a3e389853835e84a2d8fb2b81a10645b503eca9bcb98df6b5a43eb8886" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-musllinux_1_2_s390x.whl", hash = "sha256:09b26ae6b1abf0d27570633b2b078a2a20419c99d66fb2823173d73f188ce601" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:fa88b843d6e211393a37219e6a1c1df99d35e8fd90446f1118f4216e307e48cd" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-win32.whl", hash = "sha256:eb8178fe3dba6450a3e024e95ac49ed3400e506fd4e9e5c32d30adda88cbd407" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-cp313-cp313-win_amd64.whl", hash = "sha256:b1ac5992a838106edb89654e0aebfc24f5848ae2547d22c2c3f66454daa11971" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/charset-normalizer/3.4.1/charset_normalizer-3.4.1-py3-none-any.whl", hash = "sha256:d98b1668f06378c6dbefec3b92299716b931cd4e6061f3c875a71ced1780ab85" },
+]
+
+[[package]]
+name = "cryptography"
+version = "44.0.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "cffi", marker = "platform_python_implementation != 'PyPy'" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0.tar.gz", hash = "sha256:cd4e834f340b4293430701e772ec543b0fbe6c2dea510a5286fe0acabe153a02" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-macosx_10_9_universal2.whl", hash = "sha256:84111ad4ff3f6253820e6d3e58be2cc2a00adb29335d4cacb5ab4d4d34f2a123" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b15492a11f9e1b62ba9d73c210e2416724633167de94607ec6069ef724fad092" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:831c3c4d0774e488fdc83a1923b49b9957d33287de923d58ebd3cec47a0ae43f" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:761817a3377ef15ac23cd7834715081791d4ec77f9297ee694ca1ee9c2c7e5eb" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:3c672a53c0fb4725a29c303be906d3c1fa99c32f58abe008a82705f9ee96f40b" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:4ac4c9f37eba52cb6fbeaf5b59c152ea976726b865bd4cf87883a7e7006cc543" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:ed3534eb1090483c96178fcb0f8893719d96d5274dfde98aa6add34614e97c8e" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:f3f6fdfa89ee2d9d496e2c087cebef9d4fcbb0ad63c40e821b39f74bf48d9c5e" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-win32.whl", hash = "sha256:eb33480f1bad5b78233b0ad3e1b0be21e8ef1da745d8d2aecbb20671658b9053" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp37-abi3-win_amd64.whl", hash = "sha256:abc998e0c0eee3c8a1904221d3f67dcfa76422b23620173e28c11d3e626c21bd" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:660cb7312a08bc38be15b696462fa7cc7cd85c3ed9c576e81f4dc4d8b2b31591" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1923cb251c04be85eec9fda837661c67c1049063305d6be5721643c22dd4e2b7" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:404fdc66ee5f83a1388be54300ae978b2efd538018de18556dde92575e05defc" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:c5eb858beed7835e5ad1faba59e865109f3e52b3783b9ac21e7e47dc5554e289" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:f53c2c87e0fb4b0c00fa9571082a057e37690a8f12233306161c8f4b819960b7" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-manylinux_2_34_aarch64.whl", hash = "sha256:9e6fc8a08e116fb7c7dd1f040074c9d7b51d74a8ea40d4df2fc7aa08b76b9e6c" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:d2436114e46b36d00f8b72ff57e598978b37399d2786fd39793c36c6d5cb1c64" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:a01956ddfa0a6790d594f5b34fc1bfa6098aca434696a03cfdbe469b8ed79285" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-win32.whl", hash = "sha256:eca27345e1214d1b9f9490d200f9db5a874479be914199194e746c893788d417" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/cryptography/44.0.0/cryptography-44.0.0-cp39-abi3-win_amd64.whl", hash = "sha256:708ee5f1bafe76d041b53a4f95eb28cdeb8d18da17e597d46d7833ee59b97ede" },
+]
+
+[[package]]
+name = "defusedxml"
+version = "0.7.1"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/defusedxml/0.7.1/defusedxml-0.7.1.tar.gz", hash = "sha256:1bb3032db185915b62d7c6209c5a8792be6a32ab2fedacc84e01b52c51aa3e69" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/defusedxml/0.7.1/defusedxml-0.7.1-py2.py3-none-any.whl", hash = "sha256:a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61" },
+]
+
+[[package]]
+name = "dnspython"
+version = "2.7.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/dnspython/2.7.0/dnspython-2.7.0.tar.gz", hash = "sha256:ce9c432eda0dc91cf618a5cedf1a4e142651196bbcd2c80e89ed5a907e5cfaf1" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/dnspython/2.7.0/dnspython-2.7.0-py3-none-any.whl", hash = "sha256:b4c34b7d10b51bcc3a5071e7b8dee77939f1e878477eeecc965e9835f63c6c86" },
+]
+
+[[package]]
+name = "exchangelib"
+version = "5.5.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "cached-property" },
+    { name = "defusedxml" },
+    { name = "dnspython" },
+    { name = "isodate" },
+    { name = "lxml" },
+    { name = "oauthlib" },
+    { name = "pygments" },
+    { name = "requests" },
+    { name = "requests-ntlm" },
+    { name = "requests-oauthlib" },
+    { name = "tzdata" },
+    { name = "tzlocal" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/exchangelib/5.5.0/exchangelib-5.5.0.tar.gz", hash = "sha256:cd505a8d86c228dcf3b2a1928eed2905b3f1ed09dec312fa9f02e0b8a23ba42c" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/exchangelib/5.5.0/exchangelib-5.5.0-py3-none-any.whl", hash = "sha256:b67f044b851df1c9b233603beff73fec6e56292573dc230606bf15bb900cb442" },
+]
+
+[[package]]
+name = "idna"
+version = "3.10"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/idna/3.10/idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/idna/3.10/idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3" },
+]
+
+[[package]]
+name = "isodate"
+version = "0.7.2"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/isodate/0.7.2/isodate-0.7.2.tar.gz", hash = "sha256:4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/isodate/0.7.2/isodate-0.7.2-py3-none-any.whl", hash = "sha256:28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15" },
+]
+
+[[package]]
+name = "lxml"
+version = "5.3.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0.tar.gz", hash = "sha256:4e109ca30d1edec1ac60cdbe341905dc3b8f55b16855e03a54aaf59e51ec8c6f" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-macosx_10_9_universal2.whl", hash = "sha256:e99f5507401436fdcc85036a2e7dc2e28d962550afe1cbfc07c40e454256a859" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:384aacddf2e5813a36495233b64cb96b1949da72bef933918ba5c84e06af8f0e" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:874a216bf6afaf97c263b56371434e47e2c652d215788396f60477540298218f" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:65ab5685d56914b9a2a34d67dd5488b83213d680b0c5d10b47f81da5a16b0b0e" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:aac0bbd3e8dd2d9c45ceb82249e8bdd3ac99131a32b4d35c8af3cc9db1657179" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:b369d3db3c22ed14c75ccd5af429086f166a19627e84a8fdade3f8f31426e52a" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c24037349665434f375645fa9d1f5304800cec574d0310f618490c871fd902b3" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:62d172f358f33a26d6b41b28c170c63886742f5b6772a42b59b4f0fa10526cb1" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_28_ppc64le.whl", hash = "sha256:c1f794c02903c2824fccce5b20c339a1a14b114e83b306ff11b597c5f71a1c8d" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_28_s390x.whl", hash = "sha256:5d6a6972b93c426ace71e0be9a6f4b2cfae9b1baed2eed2006076a746692288c" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:3879cc6ce938ff4eb4900d901ed63555c778731a96365e53fadb36437a131a99" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:74068c601baff6ff021c70f0935b0c7bc528baa8ea210c202e03757c68c5a4ff" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-musllinux_1_2_ppc64le.whl", hash = "sha256:ecd4ad8453ac17bc7ba3868371bffb46f628161ad0eefbd0a855d2c8c32dd81a" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-musllinux_1_2_s390x.whl", hash = "sha256:7e2f58095acc211eb9d8b5771bf04df9ff37d6b87618d1cbf85f92399c98dae8" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:e63601ad5cd8f860aa99d109889b5ac34de571c7ee902d6812d5d9ddcc77fa7d" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-win32.whl", hash = "sha256:17e8d968d04a37c50ad9c456a286b525d78c4a1c15dd53aa46c1d8e06bf6fa30" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp312-cp312-win_amd64.whl", hash = "sha256:c1a69e58a6bb2de65902051d57fde951febad631a20a64572677a1052690482f" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:8c72e9563347c7395910de6a3100a4840a75a6f60e05af5e58566868d5eb2d6a" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:e92ce66cd919d18d14b3856906a61d3f6b6a8500e0794142338da644260595cd" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:1d04f064bebdfef9240478f7a779e8c5dc32b8b7b0b2fc6a62e39b928d428e51" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5c2fb570d7823c2bbaf8b419ba6e5662137f8166e364a8b2b91051a1fb40ab8b" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:0c120f43553ec759f8de1fee2f4794452b0946773299d44c36bfe18e83caf002" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:562e7494778a69086f0312ec9689f6b6ac1c6b65670ed7d0267e49f57ffa08c4" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:423b121f7e6fa514ba0c7918e56955a1d4470ed35faa03e3d9f0e3baa4c7e492" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_28_aarch64.whl", hash = "sha256:c00f323cc00576df6165cc9d21a4c21285fa6b9989c5c39830c3903dc4303ef3" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_28_ppc64le.whl", hash = "sha256:1fdc9fae8dd4c763e8a31e7630afef517eab9f5d5d31a278df087f307bf601f4" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_28_s390x.whl", hash = "sha256:658f2aa69d31e09699705949b5fc4719cbecbd4a97f9656a232e7d6c7be1a367" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-manylinux_2_28_x86_64.whl", hash = "sha256:1473427aff3d66a3fa2199004c3e601e6c4500ab86696edffdbc84954c72d832" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:a87de7dd873bf9a792bf1e58b1c3887b9264036629a5bf2d2e6579fe8e73edff" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-musllinux_1_2_ppc64le.whl", hash = "sha256:0d7b36afa46c97875303a94e8f3ad932bf78bace9e18e603f2085b652422edcd" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-musllinux_1_2_s390x.whl", hash = "sha256:cf120cce539453ae086eacc0130a324e7026113510efa83ab42ef3fcfccac7fb" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:df5c7333167b9674aa8ae1d4008fa4bc17a313cc490b2cca27838bbdcc6bb15b" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-win32.whl", hash = "sha256:c802e1c2ed9f0c06a65bc4ed0189d000ada8049312cfeab6ca635e39c9608957" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/lxml/5.3.0/lxml-5.3.0-cp313-cp313-win_amd64.whl", hash = "sha256:406246b96d552e0503e17a1006fd27edac678b3fcc9f1be71a2f94b4ff61528d" },
+]
+
+[[package]]
+name = "mail-manage"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "exchangelib" },
+    { name = "python-dotenv" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "exchangelib", specifier = ">=5.5.0" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
+
+[[package]]
+name = "oauthlib"
+version = "3.2.2"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/oauthlib/3.2.2/oauthlib-3.2.2.tar.gz", hash = "sha256:9859c40929662bec5d64f34d01c99e093149682a3f38915dc0655d5a633dd918" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/oauthlib/3.2.2/oauthlib-3.2.2-py3-none-any.whl", hash = "sha256:8139f29aac13e25d502680e9e19963e83f16838d48a0d71c287fe40e7067fbca" },
+]
+
+[[package]]
+name = "pycparser"
+version = "2.22"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/pycparser/2.22/pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/pycparser/2.22/pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc" },
+]
+
+[[package]]
+name = "pygments"
+version = "2.18.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/pygments/2.18.0/pygments-2.18.0.tar.gz", hash = "sha256:786ff802f32e91311bff3889f6e9a86e81505fe99f2735bb6d60ae0c5004f199" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/pygments/2.18.0/pygments-2.18.0-py3-none-any.whl", hash = "sha256:b8e6aca0523f3ab76fee51799c488e38782ac06eafcf95e7ba832985c8e7b13a" },
+]
+
+[[package]]
+name = "pyspnego"
+version = "0.11.2"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "cryptography" },
+    { name = "sspilib", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/pyspnego/0.11.2/pyspnego-0.11.2.tar.gz", hash = "sha256:994388d308fb06e4498365ce78d222bf4f3570b6df4ec95738431f61510c971b" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/pyspnego/0.11.2/pyspnego-0.11.2-py3-none-any.whl", hash = "sha256:74abc1fb51e59360eb5c5c9086e5962174f1072c7a50cf6da0bda9a4bcfdfbd4" },
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.0.1"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/python-dotenv/1.0.1/python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/python-dotenv/1.0.1/python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a" },
+]
+
+[[package]]
+name = "requests"
+version = "2.32.3"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "charset-normalizer" },
+    { name = "idna" },
+    { name = "urllib3" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/requests/2.32.3/requests-2.32.3.tar.gz", hash = "sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/requests/2.32.3/requests-2.32.3-py3-none-any.whl", hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6" },
+]
+
+[[package]]
+name = "requests-ntlm"
+version = "1.3.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "cryptography" },
+    { name = "pyspnego" },
+    { name = "requests" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/requests-ntlm/1.3.0/requests_ntlm-1.3.0.tar.gz", hash = "sha256:b29cc2462623dffdf9b88c43e180ccb735b4007228a542220e882c58ae56c668" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/requests-ntlm/1.3.0/requests_ntlm-1.3.0-py3-none-any.whl", hash = "sha256:4c7534a7d0e482bb0928531d621be4b2c74ace437e88c5a357ceb7452d25a510" },
+]
+
+[[package]]
+name = "requests-oauthlib"
+version = "2.0.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "oauthlib" },
+    { name = "requests" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/requests-oauthlib/2.0.0/requests-oauthlib-2.0.0.tar.gz", hash = "sha256:b3dffaebd884d8cd778494369603a9e7b58d29111bf6b41bdc2dcd87203af4e9" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/requests-oauthlib/2.0.0/requests_oauthlib-2.0.0-py2.py3-none-any.whl", hash = "sha256:7dd8a5c40426b779b0868c404bdef9768deccf22749cde15852df527e6269b36" },
+]
+
+[[package]]
+name = "sspilib"
+version = "0.2.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0.tar.gz", hash = "sha256:4d6cd4290ca82f40705efeb5e9107f7abcd5e647cb201a3d04371305938615b8" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0-cp312-cp312-win32.whl", hash = "sha256:bdf9a4f424add02951e1f01f47441d2e69a9910471e99c2c88660bd8e184d7f8" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0-cp312-cp312-win_amd64.whl", hash = "sha256:40a97ca83e503a175d1dc9461836994e47e8b9bcf56cab81a2c22e27f1993079" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0-cp312-cp312-win_arm64.whl", hash = "sha256:8ffc09819a37005c66a580ff44f544775f9745d5ed1ceeb37df4e5ff128adf36" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0-cp313-cp313-win32.whl", hash = "sha256:b9044d6020aa88d512e7557694fe734a243801f9a6874e1c214451eebe493d92" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0-cp313-cp313-win_amd64.whl", hash = "sha256:c39a698491f43618efca8776a40fb7201d08c415c507f899f0df5ada15abefaa" },
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/sspilib/0.2.0/sspilib-0.2.0-cp313-cp313-win_arm64.whl", hash = "sha256:863b7b214517b09367511c0ef931370f0386ed2c7c5613092bf9b106114c4a0e" },
+]
+
+[[package]]
+name = "tzdata"
+version = "2024.2"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/tzdata/2024.2/tzdata-2024.2.tar.gz", hash = "sha256:7d85cc416e9382e69095b7bdf4afd9e3880418a2413feec7069d533d6b4e31cc" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/tzdata/2024.2/tzdata-2024.2-py2.py3-none-any.whl", hash = "sha256:a48093786cdcde33cad18c2555e8532f34422074448fbc874186f0abd79565cd" },
+]
+
+[[package]]
+name = "tzlocal"
+version = "5.2"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+dependencies = [
+    { name = "tzdata", marker = "platform_system == 'Windows'" },
+]
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/tzlocal/5.2/tzlocal-5.2.tar.gz", hash = "sha256:8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/tzlocal/5.2/tzlocal-5.2-py3-none-any.whl", hash = "sha256:49816ef2fe65ea8ac19d19aa7a1ae0551c834303d5014c6d5a62e4cbda8047b8" },
+]
+
+[[package]]
+name = "urllib3"
+version = "2.3.0"
+source = { registry = "http://pypi.sdet.cloud/repository/pypi-group/simple" }
+sdist = { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/urllib3/2.3.0/urllib3-2.3.0.tar.gz", hash = "sha256:f8c5449b3cf0861679ce7e0503c7b44b5ec981bec0d1d3795a07f1ba96f0204d" }
+wheels = [
+    { url = "http://pypi.sdet.cloud/repository/pypi-group/packages/urllib3/2.3.0/urllib3-2.3.0-py3-none-any.whl", hash = "sha256:1cee9ad369867bfdbbb48b7dd50374c0967a0bb7710050facf0dd6911440e3df" },
+]
