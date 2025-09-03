@@ -51,22 +51,41 @@ def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.lo
                 if attachment.name.lower().endswith(('.xls', '.xlsx')):
                     has_excel = True
 
-            # Log mail details to csv. AI!
+            # Check if log file exists to write headers
+            write_header = not os.path.exists(log_file)
+            
             with open(log_file, 'a') as logger:
-                log = (f"Time: {item.datetime_received}\t"
-                       + f"Subject: {item.subject}\t"
-                       + f"Total Size: {format_size(total_size)}\t"
-                       + f"Attachments: {', '.join(attachment_names)}\n")
+                # Write header if file is new
+                if write_header:
+                    logger.write("Time,Subject,Total Size,Attachments\n")
+                
+                # Properly format each field for CSV
+                time_str = f'"{item.datetime_received}"'
+                subject_str = f'"{item.subject}"' if ',' in item.subject else item.subject
+                total_size_str = f'"{format_size(total_size)}"'
+                attachments_str = f'"{", ".join(attachment_names)}"'
+                
+                log = f"{time_str},{subject_str},{total_size_str},{attachments_str}\n"
                 logger.write(log)
                 print(log)
 
             # Delete condition and logging
             if total_size > 1024 * 1024 and has_excel:  # > 1MB
+                # Check if delete log file exists to write headers
+                write_del_header = not os.path.exists(delete_log_file)
+                
                 with open(delete_log_file, 'a') as del_logger:
-                    log = (f"Received at: {item.datetime_received}\t"
-                           + f"Deleted at: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\t"
-                           + f"Subject: {item.subject}\t"
-                           + f"Total Size: {format_size(total_size)}\n")
+                    # Write header if file is new
+                    if write_del_header:
+                        del_logger.write("Received at,Deleted at,Subject,Total Size\n")
+                    
+                    # Properly format each field for CSV
+                    received_at_str = f'"{item.datetime_received}"'
+                    deleted_at_str = f'"{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"'
+                    subject_str = f'"{item.subject}"' if ',' in item.subject else item.subject
+                    total_size_str = f'"{format_size(total_size)}"'
+                    
+                    log = f"{received_at_str},{deleted_at_str},{subject_str},{total_size_str}\n"
                     del_logger.write(log)
                     print(log)
                 item.delete()
