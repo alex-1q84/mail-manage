@@ -75,8 +75,8 @@ def process_item_attachments(item):
     return total_size, attachment_names, has_excel
 
 
-def log_item_details(item, total_size, attachment_names, log_file):
-    """Log item details to the specified log file."""
+def log_mail_details(item, total_size, attachment_names, log_file):
+    """Log mail details to the specified log file."""
     write_header = not os.path.exists(log_file)
     
     with open(log_file, 'a') as logger:
@@ -93,8 +93,8 @@ def log_item_details(item, total_size, attachment_names, log_file):
         print(log)
 
 
-def handle_item_deletion(item, total_size, delete_log_file):
-    """Handle item deletion and log to the specified file."""
+def delete_mail(item, total_size, delete_log_file):
+    """delete mail item and log to the specified file."""
     write_del_header = not os.path.exists(delete_log_file)
     
     with open(delete_log_file, 'a') as del_logger:
@@ -148,11 +148,11 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                 
                 # Process item
                 total_size, attachment_names, has_excel = process_item_attachments(item)
-                log_item_details(item, total_size, attachment_names, log_file)
+                log_mail_details(item, total_size, attachment_names, log_file)
                 
                 # Check deletion condition
                 if total_size > 1024 * 1024 and has_excel:  # > 1MB
-                    handle_item_deletion(item, total_size, delete_log_file)
+                    delete_mail(item, total_size, delete_log_file)
     
     update_last_processed_time(latest_timestamp)
 
@@ -162,6 +162,7 @@ if __name__ == "__main__":
                        help='Path to file for storing mail details')
     parser.add_argument('--delete-log', default='deleted_mails.csv',
                        help='Path to file for storing deletion records')
+    # add an argument for processing all mails not just new ones.AI!
 
     args = parser.parse_args()
 
