@@ -50,27 +50,37 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                 except ValueError:
                     last_processed_time = None
 
-    # Process all mails in inbox and in all subfolders under inbox.AI!
-    # Process items received after the last processed time, ordered from oldest to newest
-    # This ensures we process in chronological order and can track the latest timestamp
-    if last_processed_time:
-        items = account.inbox.all().filter(
-            datetime_received__gt=last_processed_time).order_by('datetime_received')
-    else:
-        items = account.inbox.all().order_by('datetime_received')
-    
     # Track the latest timestamp to update last_processed.txt
     latest_timestamp = last_processed_time
     
-    for item in items:
-        if item.attachments:
-            # Update latest timestamp
-            if latest_timestamp is None or item.datetime_received > latest_timestamp:
-                latest_timestamp = item.datetime_received
-            
-            total_size = 0
-            attachment_names = []
-            has_excel = False
+    # Get all folders under the inbox
+    # Walk through the folder tree starting from the inbox
+    folders_to_process = [account.inbox]
+    # Collect all subfolders
+    while folders_to_process:
+        folder = folders_to_process.pop()
+        # Add all child folders to the processing list
+        try:
+            folders_to_process.extend(folder.children)
+        except:
+            pass
+        
+        # Process items in the current folder
+        if last_processed_time:
+            items = folder.all().filter(
+                datetime_received__gt=last_processed_time).order_by('datetime_received')
+        else:
+            items = folder.all().order_by('datetime_received')
+        
+        for item in items:
+            if item.attachments:
+                # Update latest timestamp
+                if latest_timestamp is None or item.datetime_received > latest_timestamp:
+                    latest_timestamp = item.datetime_received
+                
+                total_size = 0
+                attachment_names = []
+                has_excel = False
 
             # Calculate total size and check for Excel files
             for attachment in item.attachments:
