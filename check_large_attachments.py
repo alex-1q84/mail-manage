@@ -113,7 +113,7 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                     log = f"{received_at_str},{deleted_at_str},{subject_str},{total_size_str}\n"
                     del_logger.write(log)
                     print(log)
-                item.delete()
+                item.move_to_trash()
     
     # Update last processed timestamp
     # If no new items were processed, keep the existing timestamp
