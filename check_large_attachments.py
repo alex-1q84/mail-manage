@@ -2,6 +2,7 @@ import os
 import argparse
 from dotenv import load_dotenv
 from exchangelib import Credentials, Account, DELEGATE
+import datetime
 
 # Load environment variables
 load_dotenv()
@@ -10,6 +11,15 @@ load_dotenv()
 USERNAME = os.getenv('EXCHANGE_USERNAME')
 PASSWORD = os.getenv('EXCHANGE_PASSWORD')
 SERVER = os.getenv('EXCHANGE_SERVER')
+
+
+def format_size(total_size):
+    """Convert bytes to human-readable format (KB or MB)."""
+    if total_size >= 1024 * 1024:  # >= 1MB
+        return f"{total_size / (1024 * 1024):.2f} MB"
+    else:  # < 1MB
+        return f"{total_size / 1024:.2f} KB"
+
 
 def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.log'):
     """Process mail attachments and log results to files.
@@ -41,17 +51,11 @@ def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.lo
                 if attachment.name.lower().endswith(('.xls', '.xlsx')):
                     has_excel = True
 
-            # Convert and format size appropriately
-            if total_size >= 1024 * 1024:  # >= 1MB
-                size_str = f"{total_size / (1024 * 1024):.2f} MB"
-            else:  # < 1MB
-                size_str = f"{total_size / 1024:.2f} KB"
-
-            # Log mail details
+            # Log mail details to csv. AI!
             with open(log_file, 'a') as logger:
                 log = (f"Time: {item.datetime_received}\t"
                        + f"Subject: {item.subject}\t"
-                       + f"Total Size: {size_str}\t"
+                       + f"Total Size: {format_size(total_size)}\t"
                        + f"Attachments: {', '.join(attachment_names)}\n")
                 logger.write(log)
                 print(log)
@@ -59,9 +63,10 @@ def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.lo
             # Delete condition and logging
             if total_size > 1024 * 1024 and has_excel:  # > 1MB
                 with open(delete_log_file, 'a') as del_logger:
-                    log = (f"Deleted at: {item.datetime_received}\t"
+                    log = (f"Received at: {item.datetime_received}\t"
+                           + f"Deleted at: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\t"
                            + f"Subject: {item.subject}\t"
-                           + f"Total Size: {size_str}\n")
+                           + f"Total Size: {format_size(total_size)}\n")
                     del_logger.write(log)
                     print(log)
                 item.delete()
