@@ -37,9 +37,34 @@ def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.lo
         access_type=DELEGATE
     )
 
-    # Walk through inbox
-    for item in account.inbox.all().order_by('-datetime_received'):
+    # Read last processed timestamp
+    last_processed_file = 'last_processed.txt'
+    last_processed_time = None
+    
+    if os.path.exists(last_processed_file):
+        with open(last_processed_file, 'r') as f:
+            content = f.read().strip()
+            if content:
+                try:
+                    last_processed_time = datetime.datetime.fromisoformat(content)
+                except ValueError:
+                    last_processed_time = None
+    
+    # Process items received after the last processed time, ordered from oldest to newest
+    # This ensures we process in chronological order and can track the latest timestamp
+    items = account.inbox.all().order_by('datetime_received')
+    if last_processed_time:
+        items = items.filter(datetime_received__gt=last_processed_time)
+    
+    # Track the latest timestamp to update last_processed.txt
+    latest_timestamp = last_processed_time
+    
+    for item in items:
         if item.attachments:
+            # Update latest timestamp
+            if latest_timestamp is None or item.datetime_received > latest_timestamp:
+                latest_timestamp = item.datetime_received
+            
             total_size = 0
             attachment_names = []
             has_excel = False
@@ -89,6 +114,13 @@ def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.lo
                     del_logger.write(log)
                     print(log)
                 item.delete()
+    
+    # Update last processed timestamp
+    # If no new items were processed, keep the existing timestamp
+    # If items were processed, update to the latest timestamp
+    if latest_timestamp is not None:
+        with open(last_processed_file, 'w') as f:
+            f.write(latest_timestamp.isoformat())
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process mail attachments and delete large Excel files.')
