@@ -21,7 +21,7 @@ def format_size(total_size):
         return f"{total_size / 1024:.2f} KB"
 
 
-def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.log'):
+def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.csv'):
     """Process mail attachments and log results to files.
 
     Args:
@@ -124,9 +124,9 @@ def tidy_mail(log_file='mail_attachments.log', delete_log_file='deleted_mails.lo
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Process mail attachments and delete large Excel files.')
-    parser.add_argument('--log', default='mail_attachments.log',
+    parser.add_argument('--log', default='mail_attachments.csv',
                        help='Path to file for storing mail details')
-    parser.add_argument('--delete-log', default='deleted_mails.log',
+    parser.add_argument('--delete-log', default='deleted_mails.csv',
                        help='Path to file for storing deletion records')
 
     args = parser.parse_args()

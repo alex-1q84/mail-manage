@@ -3,3 +3,5 @@
 .envrc
 *.log
 *.txt
+.idea
+*.csv
