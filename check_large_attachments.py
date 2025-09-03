@@ -101,14 +101,16 @@ def delete_mail(item, total_size, delete_log_file):
     
     with open(delete_log_file, 'a') as del_logger:
         if write_del_header:
-            del_logger.write("Received at,Deleted at,Subject,Total Size\n")
+            del_logger.write("Received at,Deleted at,Subject,Total Size,Sender\n")
         
         received_at_str = f'"{item.datetime_received}"'
         deleted_at_str = f'"{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"'
         subject_str = f'"{item.subject}"' if ',' in item.subject else item.subject
         total_size_str = f'"{format_size(total_size)}"'
+        # Add sender's email address
+        sender_str = f'"{item.sender.email_address}"' if item.sender else '"Unknown"'
         
-        log = f"{received_at_str},{deleted_at_str},{subject_str},{total_size_str}\n"
+        log = f"{received_at_str},{deleted_at_str},{subject_str},{total_size_str},{sender_str}\n"
         del_logger.write(log)
         print(log)
     item.move_to_trash()
