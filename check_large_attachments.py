@@ -81,14 +81,16 @@ def log_mail_details(item, total_size, attachment_names, log_file):
     
     with open(log_file, 'a') as logger:
         if write_header:
-            logger.write("Time,Subject,Total Size,Attachments\n")
+            logger.write("Time,Subject,Total Size,Attachments,Sender\n")
         
         time_str = f'"{item.datetime_received}"'
         subject_str = f'"{item.subject}"' if ',' in item.subject else item.subject
         total_size_str = f'"{format_size(total_size)}"'
         attachments_str = f'"{", ".join(attachment_names)}"'
+        # Add sender's email address
+        sender_str = f'"{item.sender.email_address}"' if item.sender else '"Unknown"'
         
-        log = f"{time_str},{subject_str},{total_size_str},{attachments_str}\n"
+        log = f"{time_str},{subject_str},{total_size_str},{attachments_str},{sender_str}\n"
         logger.write(log)
         print(log)
 
