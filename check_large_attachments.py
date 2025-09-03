@@ -49,12 +49,15 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                     last_processed_time = datetime.datetime.fromisoformat(content)
                 except ValueError:
                     last_processed_time = None
-    
+
+    # Process all mails in inbox and in all subfolders under inbox.AI!
     # Process items received after the last processed time, ordered from oldest to newest
     # This ensures we process in chronological order and can track the latest timestamp
-    items = account.inbox.all().order_by('datetime_received')
     if last_processed_time:
-        items = items.filter(datetime_received__gt=last_processed_time)
+        items = account.inbox.all().filter(
+            datetime_received__gt=last_processed_time).order_by('datetime_received')
+    else:
+        items = account.inbox.all().order_by('datetime_received')
     
     # Track the latest timestamp to update last_processed.txt
     latest_timestamp = last_processed_time
