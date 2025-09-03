@@ -166,7 +166,17 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                 log_mail_details(item, total_size, attachment_names, log_file)
                 
                 # Check deletion condition
-                if total_size > 1024 * 1024 and has_excel:  # > 1MB
+                # Only delete mails from specific senders
+                allowed_senders = [
+                    'sea9-noreply@800best.com',
+                    'quality-management@best-inc.com', 
+                    'datacenter@best-inc.com'
+                ]
+                # Get sender's email address
+                sender_email = item.sender.email_address if item.sender else None
+                
+                if (total_size > 1024 * 1024 and has_excel and 
+                    sender_email in allowed_senders):  # > 1MB and from allowed sender
                     delete_mail(item, total_size, delete_log_file)
     
     update_last_processed_time(latest_timestamp)
