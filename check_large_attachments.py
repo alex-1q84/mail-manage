@@ -119,15 +119,26 @@ def update_last_processed_time(latest_timestamp, last_processed_file='last_proce
             f.write(latest_timestamp.isoformat())
 
 
-def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.csv'):
+def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.csv', process_all=False):
     """Process mail attachments and log results to files.
 
     Args:
         log_file (str): Path to file for storing mail details
         delete_log_file (str): Path to file for storing deletion records
+        process_all (bool): If True, process all mails ignoring last processed timestamp
     """
+    # If processing all mails, remove existing log files to start fresh
+    if process_all:
+        if os.path.exists(log_file):
+            os.remove(log_file)
+
     account = setup_account()
-    last_processed_time = get_last_processed_time()
+    
+    # If process_all is True, ignore the last processed timestamp
+    if process_all:
+        last_processed_time = None
+    else:
+        last_processed_time = get_last_processed_time()
     latest_timestamp = last_processed_time
     
     # Process all folders
@@ -162,8 +173,9 @@ if __name__ == "__main__":
                        help='Path to file for storing mail details')
     parser.add_argument('--delete-log', default='deleted_mails.csv',
                        help='Path to file for storing deletion records')
-    # add an argument for processing all mails not just new ones.AI!
+    parser.add_argument('--all', action='store_true',
+                       help='Process all mails, not just new ones (ignore last processed timestamp)')
 
     args = parser.parse_args()
 
-    tidy_mail(log_file=args.log, delete_log_file=args.delete_log)
+    tidy_mail(log_file=args.log, delete_log_file=args.delete_log, process_all=args.all)
