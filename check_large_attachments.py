@@ -95,13 +95,13 @@ def log_mail_details(item, total_size, attachment_names, log_file):
         print(log)
 
 
-def delete_mail(item, total_size, delete_log_file):
+def delete_mail(item, total_size, delete_log_file, hard_delete=False):
     """delete mail item and log to the specified file."""
     write_del_header = not os.path.exists(delete_log_file)
     
     with open(delete_log_file, 'a') as del_logger:
         if write_del_header:
-            del_logger.write("Received at,Deleted at,Subject,Total Size,Sender\n")
+            del_logger.write("Received at,Deleted at,Subject,Total Size,Sender,Action\n")
         
         received_at_str = f'"{item.datetime_received}"'
         deleted_at_str = f'"{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"'
@@ -109,11 +109,16 @@ def delete_mail(item, total_size, delete_log_file):
         total_size_str = f'"{format_size(total_size)}"'
         # Add sender's email address
         sender_str = f'"{item.sender.email_address}"' if item.sender else '"Unknown"'
+        action_str = '"Hard Delete"' if hard_delete else '"Move to Trash"'
         
-        log = f"{received_at_str},{deleted_at_str},{subject_str},{total_size_str},{sender_str}\n"
+        log = f"{received_at_str},{deleted_at_str},{subject_str},{total_size_str},{sender_str},{action_str}\n"
         del_logger.write(log)
         print(log)
-    item.move_to_trash()
+    
+    if hard_delete:
+        item.delete()
+    else:
+        item.move_to_trash()
 
 
 def update_last_processed_time(latest_timestamp, last_processed_file='last_processed.txt'):
@@ -123,7 +128,7 @@ def update_last_processed_time(latest_timestamp, last_processed_file='last_proce
             f.write(latest_timestamp.isoformat())
 
 
-def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.csv', process_all=False):
+def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.csv', process_all=False, hard_delete=False):
     """Process mail attachments and log results to files.
 
     Args:
@@ -179,7 +184,7 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                 
                 if (total_size > 1024 * 1024 and has_excel and 
                     sender_email in allowed_senders):  # > 1MB and from allowed sender
-                    delete_mail(item, total_size, delete_log_file)
+                    delete_mail(item, total_size, delete_log_file, hard_delete)
     
     update_last_processed_time(latest_timestamp)
 
@@ -191,8 +196,9 @@ if __name__ == "__main__":
                        help='Path to file for storing deletion records')
     parser.add_argument('--all', action='store_true',
                        help='Process all mails, not just new ones (ignore last processed timestamp)')
-    # add an  argument to delete mails immediately not just move to trash.AI!
+    parser.add_argument('--hard-delete', action='store_true',
+                       help='Delete mails immediately instead of moving to trash')
 
     args = parser.parse_args()
 
-    tidy_mail(log_file=args.log, delete_log_file=args.delete_log, process_all=args.all)
+    tidy_mail(log_file=args.log, delete_log_file=args.delete_log, process_all=args.all, hard_delete=args.hard_delete)
