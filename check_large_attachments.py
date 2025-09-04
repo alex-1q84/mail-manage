@@ -169,8 +169,9 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                 # Only delete mails from specific senders
                 allowed_senders = [
                     'sea9-noreply@800best.com',
-                    'quality-management@best-inc.com', 
-                    'datacenter@best-inc.com'
+                    'quality-management@best-inc.com', # 邮件组
+                    'datacenter@best-inc.com', # 邮件组
+                    'sea-datacenter@best-inc.com'
                 ]
                 # Get sender's email address
                 sender_email = item.sender.email_address if item.sender else None
