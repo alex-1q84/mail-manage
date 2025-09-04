@@ -171,7 +171,8 @@ def tidy_mail(log_file='mail_attachments.csv', delete_log_file='deleted_mails.cs
                     'sea9-noreply@800best.com',
                     'quality-management@best-inc.com', # 邮件组
                     'datacenter@best-inc.com', # 邮件组
-                    'sea-datacenter@best-inc.com'
+                    'sea-datacenter@best-inc.com',
+                    'SeaDataWarehouseUAT@best-inc.com'
                 ]
                 # Get sender's email address
                 sender_email = item.sender.email_address if item.sender else None
@@ -190,6 +191,7 @@ if __name__ == "__main__":
                        help='Path to file for storing deletion records')
     parser.add_argument('--all', action='store_true',
                        help='Process all mails, not just new ones (ignore last processed timestamp)')
+    # add an  argument to delete mails immediately not just move to trash.AI!
 
     args = parser.parse_args()
 
